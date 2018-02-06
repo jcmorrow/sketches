@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import p5 from 'p5';
+import fractals from './fractals';
 import sketch from './sketch';
 
 class App extends Component {
@@ -12,6 +13,6 @@ class App extends Component {
   }
 }
 
-new p5(sketch)
+new p5(fractals)
 
 export default App;
