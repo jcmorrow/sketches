@@ -5,12 +5,12 @@ const fractals = (p) => {
   p.setup = () => {
     this.leftX = 20;
     this.topY = 20;
-    this.rectHeight = 260;
-    this.rectWidth = 600;
+    this.rectHeight = 600;
+    this.rectWidth = 1200;
     p.colorMode(p.HSB);
     p.background(0, 0, 100);
 
-    let canvas = p.createCanvas(600, 300);
+    let canvas = p.createCanvas(this.rectWidth, this.rectHeight);
     canvas.parent('sketch');
   }
 
@@ -22,21 +22,25 @@ const fractals = (p) => {
   const minWidth = (width) => (this.minimumWidth + width);
   const top = (width) => (this.topY + width);
 
-  const triangle = (p, unit) => {
-    p.triangle(0, 0, unit, unit, 2 * unit, 0);
+  const triangle = ({ p, x = 0, y = 0, unit }) => {
+    p.triangle(x, y, x + unit, y + unit, x + 2 * unit, y);
   }
 
-  const marker = (p, x, y) => {
-    p.ellipse(x, y, 5, 5);
+  const triangleFill = (p, unit) => {
+    let x = 0;
+    let y = 0;
+    while(x < this.rectWidth) {
+      triangle({ p, unit, x });
+      x = x + unit * 2;
+    }
   }
 
   p.draw = () => {
     p.noLoop();
-    // p.fill(0, 0, 50, 1);
 
     p.strokeWeight(1);
     p.stroke(0, 0, 50, 1);
-    [200, 100, 50].map((i) => (triangle(p, i)));
+    [200, 100, 50, 25].map((unit) => (triangleFill(p, unit)));
   }
 
   p.mousePressed = () => {
