@@ -33,7 +33,6 @@ export const traceSquare = ({p, x, y, size, frame, frames}) => {
   if (size < 2) { return; }
   if (p.noise(x, y) < .4) { return; }
   if (frame <= frames) {
-    const framesPerSide = frames / 4.0;
     const down = lineAnimator({
       p,
       xFrom: x,
