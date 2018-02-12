@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import p5 from 'p5';
 import fractals from './fractals';
-import sketch from './sketch';
+import lineDrawing from './line-drawing';
 
 class App extends Component {
   render() {
@@ -13,6 +13,6 @@ class App extends Component {
   }
 }
 
-new p5(fractals)
+new p5(lineDrawing);
 
 export default App;

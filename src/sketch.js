@@ -18,7 +18,6 @@ const sketch = (p) => {
   const gauss = (mean, variance) => (
     Math.abs(mean + variance * p.randomGaussian())
   )
-
   const left = (width) => (this.leftX + width);
   const top = (width) => (this.topY + width);
 
