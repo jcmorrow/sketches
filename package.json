@@ -1,9 +1,10 @@
 {
   "name": "fourth_attempt",
+  "homepage": "https://jcmorrow.github.io/sketches",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "now": "^9.3.0",
+    "gh-pages": "^1.1.0",
     "p5": "^0.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
