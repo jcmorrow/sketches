@@ -3,17 +3,19 @@ import _ from 'underscore';
 const perlin = (p) => {
   window.p5 = p;
   p.setup = () => {
-    p.background(0, 0, 100);
-
     const canvas = p.createCanvas(700, 700);
     canvas.parent('sketch');
+
+    p.stroke(200, 200, 200);
+
     this.time = 0;
   }
 
   const perlinLine = (p, x, y, time) => {
     const noise = p.noise(x, y, time);
+
     p.rotate(noise);
-    // p.line(x, y, x + 10, y + 10);
+
     line(p, x, y, noise * 360);
   };
 
@@ -22,14 +24,16 @@ const perlin = (p) => {
   };
 
   p.draw = () => {
-    p.stroke(200, 200, 200);
-    this.time = this.time + .01;
-    _.range(50).map((x) => {
-      _.range(50).map((y) => {
-        perlinLine(p, x * 10, y * 10, this.time);
+    p.clear();
+    p.translate(350, 350);
+    p.background(0, 0, 100);
+    this.time = this.time + .0005;
+
+    _.range(20).map((x) => {
+      _.range(20).map((y) => {
+        perlinLine(p, 100 + x * 5, 100 + y * 5, this.time);
       });
     });
-    p.clear();
   }
 
   p.mousePressed = () => {
