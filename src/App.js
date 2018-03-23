@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import p5 from 'p5';
 import fractals from './fractals';
 import perlin from './perlin';
+import lines from './lines';
 import noise from './noise';
+import spiral from './spiral';
 
 class App extends Component {
   render() {
@@ -15,6 +17,6 @@ class App extends Component {
 }
 
 window.Vector = p5.Vector;
-new p5(noise);
+new p5(lines);
 
 export default App;
