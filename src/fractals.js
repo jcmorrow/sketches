@@ -1,4 +1,3 @@
-import { fractalSquare, shadedSquare } from './fractal-square';
 import { fractalTriangle } from './fractal-triangle';
 
 const fractals = (p) => {

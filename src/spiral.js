@@ -1,5 +1,3 @@
-import _ from 'underscore';
-
 const size = 800;
 
 const spiral = (p) => {

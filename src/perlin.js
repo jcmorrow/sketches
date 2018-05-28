@@ -29,8 +29,8 @@ const perlin = (p) => {
     p.background(0, 0, 100);
     this.time = this.time + .0005;
 
-    _.range(20).map((x) => {
-      _.range(20).map((y) => {
+    _.range(50).forEach((x) => {
+      _.range(50).forEach((y) => {
         perlinLine(p, 100 + x * 5, 100 + y * 5, this.time);
       });
     });

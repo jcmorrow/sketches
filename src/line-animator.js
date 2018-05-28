@@ -14,10 +14,11 @@ function* square(magnitude) {
 
   let direction = 'UP';
   let currentMagnitude = magnitude;
+  const calcMagnitude = (c) => (c * currentMagnitude);
   while(true) {
     if (direction === 'LEFT') {currentMagnitude = currentMagnitude / 2}
     direction = successors[direction]
-    yield coords[direction].map((c) => (c * currentMagnitude));
+    yield coords[direction].map(calcMagnitude);
   }
 }
 
