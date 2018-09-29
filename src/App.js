@@ -6,7 +6,9 @@ import lines from "./lines";
 import noise from "./noise";
 import roofs from "./roofs";
 import spiral from "./spiral";
+import spinningPerlins from "./spinningPerlins";
 import friends from "./friends";
+import attraction from "./attraction";
 import life from "./life";
 
 class App extends Component {
@@ -20,6 +22,6 @@ class App extends Component {
 }
 
 window.Vector = p5.Vector;
-new p5(life);
+new p5(spinningPerlins);
 
 export default App;
