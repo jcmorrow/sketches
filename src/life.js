@@ -8,7 +8,7 @@ const randomButUnlikely = () => Math.random() > 0.3;
 
 const life = p => {
   p.setup = () => {
-    p.frameRate(1);
+    p.frameRate(100);
     const canvas = p.createCanvas(SIZE, SIZE);
     canvas.parent("sketch");
     window.cells = _
@@ -41,8 +41,10 @@ const life = p => {
         });
         if (cell[0]) {
           p.fill(0);
+          p.stroke(0);
         } else {
           p.fill(255);
+          p.stroke(255);
         }
         p.rect(0, 0, CELL_SIZE, CELL_SIZE);
         p.translate(CELL_SIZE, 0);

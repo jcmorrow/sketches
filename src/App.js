@@ -10,6 +10,7 @@ import spinningPerlins from "./spinningPerlins";
 import friends from "./friends";
 import attraction from "./attraction";
 import life from "./life";
+import sequence from "./sequence";
 
 class App extends Component {
   render() {
@@ -22,6 +23,6 @@ class App extends Component {
 }
 
 window.Vector = p5.Vector;
-new p5(spinningPerlins);
+new p5(sequence);
 
 export default App;
