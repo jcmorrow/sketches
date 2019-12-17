@@ -10,6 +10,8 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="%PUBLIC_URL%/foundation.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/style.css" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -23,8 +25,24 @@
   </head>
   <body>
     <noscript>
-      You need to enable JavaScript to run this app.
+      Hi! I too enjoy the web without Javascript. In the case of this site, you are just missing out on some fun visualizations, so no worries!
     </noscript>
-    <div id="root"></div>
+
+    <div class="grid-x">
+      <div class="cell medium-3 small-12 left-bar">
+        <a href="/"><img alt="headshot" class="headshot" src="%PUBLIC_URL%/headshot.jpg"/></a>
+        <h1>Josh Morrow</h1>
+        <h3>Software Developer</h3>
+        <div class="links">
+          <a href="https://github.com/jcmorrow" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/jcmorrowprofile" target="_blank">LinkedIn</a>
+          <a href="mailto:josh@jcmorrow.com">Email</a>
+        </div>
+      </div>
+      <div class="cell medium-9 small-12">
+        <div id="root">
+        </div>
+      </div>
+    </div>
   </body>
 </html>

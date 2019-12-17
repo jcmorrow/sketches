@@ -2,8 +2,9 @@ const SIZE = 1500;
 
 const BEZIER_CONTROL_POINT_TANGENT_COEFFICIENT =
   (4.0 / 3.0) * (Math.sqrt(2) - 1);
-const RADIUS = 1;
+const RADIUS = 7;
 const DIAMETER = RADIUS * 2;
+const MAX = 70;
 
 const sequence = p => {
   window.p = p;
@@ -72,6 +73,9 @@ const sequence = p => {
     halfCircle(this.cursor, next);
     this.cursor = next;
     this.step++;
+    if (this.step > MAX) {
+      p.noLoop();
+    }
   };
 };
 

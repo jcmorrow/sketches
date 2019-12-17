@@ -23,6 +23,6 @@ class App extends Component {
 }
 
 window.Vector = p5.Vector;
-new p5(sequence);
+new p5(perlin);
 
 export default App;
